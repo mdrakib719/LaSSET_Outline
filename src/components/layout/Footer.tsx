@@ -69,7 +69,7 @@ export function Footer() {
         
         <div className="mt-12 border-t border-gray-800 pt-8">
           <p className="text-gray-400 text-sm text-center">
-            © {new Date().getFullYear()} Research Hub. All rights reserved.
+            © {new Date().getFullYear()} Research Hub. All rights reserved by Rakib.
           </p>
         </div>
       </div>
