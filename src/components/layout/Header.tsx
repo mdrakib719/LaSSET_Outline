@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -10,11 +9,11 @@ const navigation = [
   { name: "About", href: "/about" },
   { name: "Research", href: "/research" },
   { name: "People", href: "/people" },
-  { name: "Publications", href: "/publications" },
-  { name: "Resources", href: "/resources" },
-  { name: "Opportunities", href: "/opportunities" },
-  { name: "Partners", href: "/partners" },
-  { name: "News", href: "/news" },
+  // { name: "Publications", href: "/publications" },
+  // { name: "Resources", href: "/resources" },
+  // { name: "Opportunities", href: "/opportunities" },
+  // { name: "Partners", href: "/partners" },
+  // { name: "News", href: "/news" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -24,7 +23,10 @@ export function Header() {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
+      <nav
+        className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
+        aria-label="Global"
+      >
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-2">
             <span className="text-3xl font-bold text-research-700">
@@ -32,7 +34,7 @@ export function Header() {
             </span>
           </Link>
         </div>
-        
+
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -43,7 +45,7 @@ export function Header() {
             <Menu className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        
+
         <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map((item) => (
             <Link
@@ -55,20 +57,24 @@ export function Header() {
             </Link>
           ))}
         </div>
-        
+
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Button variant="outline" className="text-sm font-semibold leading-6">
             Member Access <span aria-hidden="true">&rarr;</span>
           </Button>
         </div>
       </nav>
-      
+
       {/* Mobile menu */}
       {isMobile && mobileMenuOpen && (
         <div className="fixed inset-0 z-50 bg-white">
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <Link to="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
+              <Link
+                to="/"
+                className="-m-1.5 p-1.5"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 <span className="text-2xl font-bold text-research-700">
                   Research<span className="text-accent-500">Hub</span>
                 </span>
